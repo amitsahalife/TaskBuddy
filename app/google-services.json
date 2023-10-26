@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "34202888218",
+    "project_id": "todo-list-785a5",
+    "storage_bucket": "todo-list-785a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34202888218:android:e8fd3564c90ebceab809a3",
+        "android_client_info": {
+          "package_name": "com.amitsahalife.todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9zwlQ0P3Q142-VA2itytsYi6rCLuUJV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
