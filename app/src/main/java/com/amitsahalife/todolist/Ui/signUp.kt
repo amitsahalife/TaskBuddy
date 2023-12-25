@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.amitsahalife.todolist.R
 import com.amitsahalife.todolist.databinding.FragmentSignUpBinding
+import com.amitsahalife.todolist.util.Util
 import com.google.firebase.auth.FirebaseAuth
 import kotlin.math.min
 
@@ -32,11 +33,13 @@ private lateinit var binding: FragmentSignUpBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init(view)
+        Util.statusBarUtil(this, R.color.signup)
 
-        binding.signUp.setOnClickListener {
-            navControl.navigate(R.id.action_signUp_to_signIn)
-        }
+//        binding.signUp.setOnClickListener {
+//            navControl.navigate(R.id.action_signIn_to_signUp)
+//        }
         binding.nextBtn.setOnClickListener {
+            Util.hapticFeedback(requireContext())
             val email = binding.emailEt.text.toString()
             val pass = binding.passEt.text.toString()
             val verfifyPass = binding.verifyPassEt.text.toString()
@@ -56,6 +59,7 @@ private lateinit var binding: FragmentSignUpBinding
     }
 
     private fun registerUser(email: String, pass: String) {
+        binding.progressBarTwo.visibility= View.VISIBLE
         auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
 
             if (it.isSuccessful){
@@ -67,8 +71,9 @@ private lateinit var binding: FragmentSignUpBinding
 
                 val errorM = it.exception?.message?.substring(0, min(it.exception?.message?.length?:0, MAX_LENGTH))
 
-                Toast.makeText(context, errorM, Toast.LENGTH_LONG).show()
+                Toast.makeText(context, it.exception?.localizedMessage, Toast.LENGTH_LONG).show()
             }
+            binding.progressBarTwo.visibility= View.GONE
         }
 
     }

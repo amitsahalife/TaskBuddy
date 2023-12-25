@@ -10,9 +10,8 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.amitsahalife.todolist.R
 import com.amitsahalife.todolist.databinding.FragmentSignInBinding
-import com.amitsahalife.todolist.databinding.FragmentSignUpBinding
+import com.amitsahalife.todolist.util.Util
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.math.min
 
 
 class signIn : Fragment() {
@@ -32,15 +31,16 @@ class signIn : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+        Util.statusBarUtil(this, R.color.signin)
         init(view)
-        binding.textViewSignUp.setOnClickListener {
+        binding.authtextView.setOnClickListener {
             navControl.navigate(R.id.action_signIn_to_signUp)
         }
 
         binding.nextBtn.setOnClickListener {
             val email = binding.emailEt.text.toString()
             val pass = binding.passEt.text.toString()
+            Util.hapticFeedback(requireContext())
 
             if (email.isNotEmpty() && pass.isNotEmpty()) {
                 loginUser(email, pass)
@@ -54,17 +54,19 @@ class signIn : Fragment() {
     }
 
     private fun loginUser(email: String, pass: String) {
+        binding.progressBar.visibility= View.VISIBLE
 
 auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener {
     if (it.isSuccessful) {
         navControl.navigate(R.id.action_signIn_to_homeFragment)
     } else {
-        val MAX_LENGTH = 100
+        //val MAX_LENGTH = 100
 
-        val errorM = it.exception?.message?.substring(0, min(it.exception?.message?.length?:0, MAX_LENGTH))
+       // val errorM = it.exception?.message?.substring(0, min(it.exception?.message?.length?:0, MAX_LENGTH))
 
-        Toast.makeText(context, errorM, Toast.LENGTH_LONG).show()
+        Toast.makeText(context, it.exception?.localizedMessage, Toast.LENGTH_LONG).show()
     }
+    binding.progressBar.visibility = View.INVISIBLE
 }
     }
 

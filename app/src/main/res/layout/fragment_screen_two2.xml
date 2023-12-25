@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Ui.screenTwoFragment">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_url="REPLACE_JSON_URL"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/one"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/alegreya_sc_black"
+        android:padding="10dp"
+        android:text="Ready Buddy??"
+        android:textColor="#4A4A4A"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cormorant_upright_bold"
+
+        android:padding="10dp"
+        android:text=" To Managing YourSelf In A Better Way.."
+        android:textColor="#053C7E"
+        android:textSize="25dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/login"
+            android:layout_width="130dp"
+app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_height="50dp"
+            app:rippleColor="@color/signin"
+            android:layout_gravity="center|bottom"
+            app:cardCornerRadius="30dp"
+            android:layout_marginLeft="20dp"
+           android:layout_margin="20dp"
+            app:cardBackgroundColor="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/cormorant_upright_bold"
+                android:text="Login"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/signUp"
+            android:layout_width="130dp"
+
+app:strokeWidth="1dp"
+            app:strokeColor="@color/black"
+            android:layout_height="50dp"
+android:layout_gravity="center|bottom"
+            app:rippleColor="@color/signup"
+            app:cardCornerRadius="30dp"
+            android:layout_margin="20dp"
+
+            app:cardBackgroundColor="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/cormorant_upright_bold"
+                android:text="SignUp"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

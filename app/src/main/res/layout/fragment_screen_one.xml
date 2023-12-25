@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:hapticFeedbackEnabled="true"
+    android:layout_height="match_parent"
+    android:background="@color/screenone"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Ui.screenOneFragment">
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+       app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/sonee"
+            app:lottie_loop="true"/>
+z
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/alegreya_sc_black"
+            android:padding="10dp"
+            android:text="A TodoList "
+            android:textColor="#1A2E35"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:paddingLeft="10dp"
+            android:fontFamily="@font/alegreya_sc_black"
+            android:text="in Your Pocket"
+            android:textColor="#DD4F38"
+
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/cormorant_upright_bold"
+            android:padding="10dp"
+            android:text="We're very lucky to find you...!\nWith TaskBuddy You can save your\nimportent task"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/screenOneNext"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_height="50dp"
+           android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="30dp"
+app:rippleColor="@color/white"
+
+            app:cardBackgroundColor="#242121">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:fontFamily="@font/audiowide"
+                android:padding="10dp"
+
+                android:text="Start Your Journey"
+                android:textColor="#E0E0E0"
+                android:textSize="20dp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

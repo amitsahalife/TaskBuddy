@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/signin"
     android:layout_height="match_parent"
     tools:context=".Ui.signIn">
 
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="fitXY"
-
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+app:lottie_speed="3"
+        app:lottie_rawRes="@raw/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,18 +35,7 @@
 
 
 
-    <TextView
-        android:id="@+id/authtextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
 
-        android:text="Sign In"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView1"
@@ -51,6 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="-64dp"
+        app:strokeColor="#1C2FAD"
+        app:strokeWidth="1dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         app:cardUseCompatPadding="true"
@@ -66,17 +60,23 @@
             android:background="@color/white"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
+
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailEt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:drawablePadding="5dp"
                 android:paddingTop="15dp"
+android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:background="@color/white"
-                android:hint="Enter ur email"
+                android:hint="Enter Mail/ID"
+
                 android:inputType="textEmailAddress"
-                android:paddingStart="12dp" />
+                android:paddingStart="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -89,6 +89,8 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="5dp"
         app:cardCornerRadius="8dp"
+        app:strokeColor="#1C2FAD"
+        app:strokeWidth="1dp"
         app:cardElevation="8dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,10 +102,15 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/white"
+
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
+
+            app:placeholderTextColor="@color/black"
+            app:errorTextColor="#B70A0A"
+
             app:hintEnabled="false"
+            app:passwordToggleTint="#1C2FAC"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -111,10 +118,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
+                android:drawableStart="@drawable/baseline_password_24"
                 android:background="@color/white"
-                android:hint="Enter ur pass"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+
+                android:hint="Enter PassKey"
+                android:drawablePadding="5dp"
                 android:inputType="textPassword"
-                android:paddingStart="12dp" />
+                android:paddingStart="10dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,6 +139,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
+        android:tint="#1C2FAD"
         android:layout_marginEnd="12dp"
   android:src="@drawable/baseline_arrow_circle_right_24"
         app:layout_constraintEnd_toEndOf="@id/cardView2"
@@ -138,25 +151,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-
+android:textColor="#CA252222"
         android:text="Not Registered Yet ??"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
+
         app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/nextBtn" />
 
     <TextView
-        android:id="@+id/textViewSignUp"
+        android:id="@+id/authtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+android:textColor="@color/black"
+        android:textStyle="bold"
         android:text=" Sign Up"
 
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/textview32"
         app:layout_constraintTop_toTopOf="@id/textview32" />
 
@@ -165,7 +179,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20" />
+
+        app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -173,5 +188,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.80" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authtextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
