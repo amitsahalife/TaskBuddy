@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#61E2DFE8"
+    tools:context=".Ui.screenTwoFragment">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:lottie_url="REPLACE_JSON_URL"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/screen_two"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="#7A4ECA"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage YourSelf"
+
+        android:padding="10dp"
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/login"
+            android:layout_width="130dp"
+
+            android:layout_height="50dp"
+            android:layout_gravity="center|bottom"
+            app:cardCornerRadius="30dp"
+            android:layout_marginLeft="20dp"
+           android:layout_margin="20dp"
+            app:cardBackgroundColor="#DFD3F6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="30dp"
+                android:textColor="#4A4A4A"
+                android:layout_gravity="center"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/signUp"
+            android:layout_width="130dp"
+
+
+            android:layout_height="50dp"
+android:layout_gravity="center|bottom"
+            app:cardCornerRadius="30dp"
+            android:layout_margin="20dp"
+
+            app:cardBackgroundColor="#DFD3F6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SignUp"
+                android:textSize="30dp"
+                android:textColor="#4A4A4A"
+                android:layout_gravity="center"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

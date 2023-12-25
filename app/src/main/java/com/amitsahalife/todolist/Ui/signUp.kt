@@ -34,7 +34,7 @@ private lateinit var binding: FragmentSignUpBinding
         init(view)
 
         binding.signUp.setOnClickListener {
-            navControl.navigate(R.id.action_signUp_to_signIn)
+            navControl.navigate(R.id.action_signIn_to_signUp)
         }
         binding.nextBtn.setOnClickListener {
             val email = binding.emailEt.text.toString()

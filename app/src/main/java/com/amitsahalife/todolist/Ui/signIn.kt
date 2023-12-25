@@ -34,7 +34,7 @@ class signIn : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         
         init(view)
-        binding.textViewSignUp.setOnClickListener {
+        binding.authtextView.setOnClickListener {
             navControl.navigate(R.id.action_signIn_to_signUp)
         }
 

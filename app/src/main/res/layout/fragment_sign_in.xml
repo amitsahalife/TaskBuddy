@@ -7,12 +7,14 @@
     tools:context=".Ui.signIn">
 
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="fitXY"
-
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+app:lottie_speed="3"
+        app:lottie_rawRes="@raw/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,18 +34,7 @@
 
 
 
-    <TextView
-        android:id="@+id/authtextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
 
-        android:text="Sign In"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView1"
@@ -72,11 +63,15 @@
                 android:id="@+id/emailEt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:drawablePadding="5dp"
                 android:paddingTop="15dp"
+
                 android:background="@color/white"
-                android:hint="Enter ur email"
+                android:hint="Enter Mail/ID"
+
                 android:inputType="textEmailAddress"
-                android:paddingStart="12dp" />
+                android:paddingStart="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -111,10 +106,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
+                android:drawableStart="@drawable/baseline_password_24"
                 android:background="@color/white"
-                android:hint="Enter ur pass"
+                android:hint="Enter PassKey"
+                android:drawablePadding="5dp"
                 android:inputType="textPassword"
-                android:paddingStart="12dp" />
+                android:paddingStart="10dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,25 +135,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-
+android:textColor="#CA252222"
         android:text="Not Registered Yet ??"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
+
         app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/nextBtn" />
 
     <TextView
-        android:id="@+id/textViewSignUp"
+        android:id="@+id/authtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+android:textColor="#1DFEF8"
         android:text=" Sign Up"
 
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/textview32"
         app:layout_constraintTop_toTopOf="@id/textview32" />
 
@@ -165,7 +162,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20" />
+
+        app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
