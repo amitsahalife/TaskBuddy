@@ -2,9 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:hapticFeedbackEnabled="true"
     android:layout_height="match_parent"
-    android:background="@color/screenone"
+    android:background="#B3F4E7E5"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Ui.screenOneFragment">
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -21,63 +20,46 @@
        app:lottie_autoPlay="true"
             app:lottie_rawRes="@raw/sonee"
             app:lottie_loop="true"/>
-z
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="A TodoList \nin Your Pocket"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/alegreya_sc_black"
             android:padding="10dp"
-            android:text="A TodoList "
-            android:textColor="#1A2E35"
             android:textSize="40dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#1A2E35"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-          android:paddingLeft="10dp"
-            android:fontFamily="@font/alegreya_sc_black"
-            android:text="in Your Pocket"
-            android:textColor="#DD4F38"
-
-            android:textSize="40dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:text="We're very lucky to find you!\nWith appname we can save your\nimportent task"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/cormorant_upright_bold"
             android:padding="10dp"
-            android:text="We're very lucky to find you...!\nWith TaskBuddy You can save your\nimportent task"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
 
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/screenOneNext"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_marginTop="30dp"
             android:layout_height="50dp"
            android:layout_gravity="center_horizontal"
             app:cardCornerRadius="30dp"
-app:rippleColor="@color/white"
 
-            app:cardBackgroundColor="#242121">
+            app:cardBackgroundColor="#FE735D">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                android:fontFamily="@font/audiowide"
-                android:padding="10dp"
-
-                android:text="Start Your Journey"
+                android:text="Next"
+                android:textSize="35dp"
                 android:textColor="#E0E0E0"
-                android:textSize="20dp" />
+                android:layout_gravity="center_horizontal"/>
 
 
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
 
 
