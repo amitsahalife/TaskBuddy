@@ -14,8 +14,12 @@
 
 ## 📸 Demo
 <p align="center">
-  <img src="screenshots/todo_demo.gif" alt="ToDo App Demo" width="300"/>
+<img src="https://github.com/amitsahalife/amitsahalife/assets/79406760/b27095e7-0ccd-429d-aef3-e3c36609c7ff" alt="TaskBuddyPhoto" width="700" title = "ArcadeX"/>
+   </p>
+ <p align="center">
+  <img src="https://github.com/amitsahalife/amitsahalife/assets/79406760/d47d1c0a-f687-495d-bcf9-0822c829308b" alt="TaskBuddyGif" width="190" title = "TaskBuddy"/>
 </p>
+
 
 ---
 
