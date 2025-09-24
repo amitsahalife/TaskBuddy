@@ -8,6 +8,10 @@
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ---
 
+## 📥 Download
+[![Download](https://img.shields.io/badge/Download-APK-blue?logo=android)](https://github.com/amitsahalife/TaskBuddy/releases/download/v1.0.0/Task.Buddy.1.apk)
+
+
 ## 📸 Demo
 <p align="center">
   <img src="screenshots/todo_demo.gif" alt="ToDo App Demo" width="300"/>
